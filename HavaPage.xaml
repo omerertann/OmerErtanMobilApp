@@ -1,0 +1,44 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OmerErtanMobilApp.HavaPage"
+             Title="Hava Durumu">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+
+            <Entry x:Name="sehirEntry" Placeholder="Şehir adını girin" />
+
+            <Button Text="Getir" Clicked="OnGetirClicked" />
+
+            <Label x:Name="havaSonucLabel"
+                   Text="Sonuç burada görünecek"
+                   FontSize="18"
+                   TextColor="DarkBlue"
+                   HorizontalOptions="Center"
+                   IsVisible="True" />
+
+            <!-- Yeni alanlar -->
+            <Label x:Name="sehirLabel"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   HorizontalOptions="Center" />
+
+            <Image x:Name="havaIkon"
+                   WidthRequest="100"
+                   HeightRequest="100"
+                   HorizontalOptions="Center" />
+
+            <Label x:Name="sicaklikLabel"
+                   FontSize="22"
+                   TextColor="Red"
+                   HorizontalOptions="Center" />
+
+            <Label x:Name="durumLabel"
+                   FontSize="18"
+                   TextColor="DarkSlateGray"
+                   HorizontalOptions="Center" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

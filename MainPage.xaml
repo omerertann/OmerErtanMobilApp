@@ -1,0 +1,41 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OmerErtanMobilApp.MainPage"
+             Title="Ana Sayfa"
+             BackgroundColor="White">
+
+    <StackLayout Padding="20" Spacing="20"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <Image Source="omer.jpg"
+               WidthRequest="700"
+               HeightRequest="500"
+               Aspect="AspectFill"
+               HorizontalOptions="Center" />
+
+        <Label Text="Ödev-3"
+               FontSize="20"
+               TextColor="Black"
+               HorizontalOptions="Center" />
+
+        <Label Text="Ömer Ertan"
+               FontSize="20"
+               TextColor="Black"
+               HorizontalOptions="Center" />
+
+        <Label Text="21010310056"
+               FontSize="20"
+               TextColor="Black"
+               HorizontalOptions="Center" />
+
+        <Label Text="Bartın Üniversitesi"
+               FontSize="20"
+               TextColor="Black"
+               HorizontalOptions="Center" />
+
+        <Label Text="Bilgisayar Mühendisliği"
+               FontSize="20"
+               TextColor="Black"
+               HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OmerErtanMobilApp.RegisterPage"
+             Title="Kayıt Ol"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="15">
+            <Label Text="Kayıt Ol"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="DarkSlateBlue"
+                   HorizontalOptions="Center"/>
+
+            <Entry x:Name="emailEntry"
+                   Placeholder="E-posta"
+                   Keyboard="Email"
+                   TextColor="Black"
+                   PlaceholderColor="Gray"
+                   BackgroundColor="#EEE"
+                   HeightRequest="45"
+                   Margin="0,10,0,0"/>
+
+            <Entry x:Name="passwordEntry"
+                   Placeholder="Şifre"
+                   IsPassword="True"
+                   TextColor="Black"
+                   PlaceholderColor="Gray"
+                   BackgroundColor="#EEE"
+                   HeightRequest="45"/>
+
+            <Button Text="Kayıt Ol"
+                    Clicked="OnRegisterClicked"
+                    BackgroundColor="MediumPurple"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="45"/>
+
+            <Label x:Name="errorLabel"
+                   TextColor="Red"
+                   IsVisible="False"
+                   FontSize="14"
+                   HorizontalTextAlignment="Center" />
+
+            <Button Text="Zaten bir hesabım var"
+                    Clicked="GoToLogin"
+                    BackgroundColor="Transparent"
+                    TextColor="DarkSlateBlue"
+                    FontAttributes="Italic"
+                    FontSize="14"
+                    HorizontalOptions="Center"
+                    Margin="0,20,0,0"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

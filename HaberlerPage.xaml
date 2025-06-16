@@ -1,0 +1,27 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OmerErtanMobilApp.HaberlerPage"
+             Title="Haberler">
+
+    <ScrollView>
+        <StackLayout Padding="10">
+            <!-- Üstte açıklama ya da başlık varsa buraya eklenebilir -->
+
+            <CollectionView x:Name="haberListesi" SelectionMode="Single" SelectionChanged="OnHaberSecildi"
+                            HeightRequest="1000">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="Gray" Padding="10" CornerRadius="10" Margin="5">
+                            <StackLayout>
+                                <Image Source="{Binding thumbnail}" HeightRequest="150" Aspect="AspectFill"/>
+                                <Label Text="{Binding title}" FontAttributes="Bold" FontSize="16"/>
+                                <Label Text="{Binding pubDate}" FontSize="12" TextColor="Gray"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

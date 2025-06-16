@@ -1,0 +1,26 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OmerErtanMobilApp.KurlarPage"
+             Title="Döviz Kurları">
+
+    <StackLayout Padding="20" Spacing="10">
+
+        <!-- Yükleniyor göstergesi -->
+        <ActivityIndicator x:Name="loadingIndicator" IsRunning="True" IsVisible="True"/>
+
+        <!-- CollectionView zaten kendi scroll'unu yapar -->
+        <CollectionView x:Name="kurListesi" HeightRequest="1000">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="Gray" Padding="10" CornerRadius="10" Margin="5">
+                        <StackLayout>
+                            <Label Text="{Binding Kod}" FontAttributes="Bold" FontSize="16"/>
+                            <Label Text="{Binding Satis}" FontSize="14"/>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+</ContentPage>

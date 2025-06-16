@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OmerErtanMobilApp.Views.TodoPage"
+             Title="Yapılacaklar">
+
+    <StackLayout Padding="10">
+        <Button Text="Yeni Görev Ekle" Clicked="OnEkleClicked" />
+
+        <CollectionView x:Name="todoListesi">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Sil" BackgroundColor="Red" Invoked="OnSilClicked" />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+
+                        <Grid Padding="10">
+                            <StackLayout>
+                                <Label Text="{Binding Baslik}" FontAttributes="Bold"/>
+                                <Label Text="{Binding Detay}" FontSize="12" />
+                                <Label Text="{Binding Tarih, StringFormat='{0:dd.MM.yyyy HH:mm}'}" FontSize="10" TextColor="Gray"/>
+                                <CheckBox IsChecked="{Binding YapildiMi}" />
+                            </StackLayout>
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

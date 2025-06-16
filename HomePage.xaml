@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OmerErtanMobilApp.HomePage"
+             Title="Ana Sayfa">
+
+    <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="Center">
+        <Image Source="omer.jpg" WidthRequest="150" HeightRequest="150" Aspect="AspectFill"/>
+        <Label Text="Hoş geldin Ömer Ertan!" FontSize="22" HorizontalOptions="Center"/>
+        <Label Text="Öğrenci No: 21010310056" FontSize="18" HorizontalOptions="Center"/>
+        <Button Text="Devam Et" Clicked="OnContinueClicked"/>
+    </VerticalStackLayout>
+</ContentPage>
